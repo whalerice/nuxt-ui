@@ -10,3 +10,4 @@ dist
 pnpm-store/
 _smoke-consume/
 packages/ui/*.tgz
+.vercel
