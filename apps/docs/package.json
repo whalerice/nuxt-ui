@@ -1,0 +1,28 @@
+{
+  "name": "docs",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --port 9002",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "docs:scaffold": "node scripts/scaffold-component-doc.mjs",
+    "content:reset": "rm -f .data/content/contents.sqlite contents.sqlite"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0"
+  },
+  "dependencies": {
+    "@whalerice/nuxt-ui": "workspace:*",
+    "@nuxt/content": "3.13.0",
+    "@nuxt/eslint": "1.15.2",
+    "@nuxt/icon": "2.2.2",
+    "better-sqlite3": "^12.10.0",
+    "eslint": "^9.0.0 || ^10.0.0",
+    "nuxt": "^4.4.5",
+    "vue": "^3.5.34",
+    "vue-router": "^5.0.6"
+  }
+}

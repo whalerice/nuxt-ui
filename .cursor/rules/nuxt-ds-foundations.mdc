@@ -1,0 +1,13 @@
+---
+description: Nuxt 4 DS 모노레포 핵심 제약 — shadcn-vue CLI, shadcn-nuxt 금지, 플랜 링크
+alwaysApply: true
+---
+
+# Nuxt UI (레포 전역)
+
+- **CLI**: `shadcn-vue` 로만 UI 소스를 추가·갱신한다. 작업 루트는 `packages/ui` 패키지 루트.
+- **금지**: `shadcn-nuxt` npm 의존 없음. companion 모듈은 `@whalerice/nuxt-ui/module` + 레이어 조합.
+- **스택**: Nuxt 4, Tailwind v4 (문서 기준 정합).
+- **별칭**: `components.json` · `tsconfig` paths · `nuxt.config` alias 를 한 번에 맞춘다.
+- **검증**: 변경 시 `apps/playground` 로 스모크.
+- **계획**: `.cursor/plans/nuxt_ds_모노레포_f296cff8.plan.md` 를 따른다.

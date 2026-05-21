@@ -1,0 +1,16 @@
+{
+  "name": "@whalerice/nuxt-ui",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter docs dev",
+    "build": "pnpm -r run build",
+    "prepare:ui": "pnpm --filter @whalerice/nuxt-ui exec nuxt prepare",
+    "pack:ui": "pnpm --filter @whalerice/nuxt-ui pack --dry-run",
+    "publish:ui": "pnpm --filter @whalerice/nuxt-ui publish --no-git-checks"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@11.1.2"
+}

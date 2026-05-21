@@ -1,0 +1,110 @@
+/* 컴포넌트 문서 (API Reference 등) — PreviewFrame·코드 뷰어 하위 제외 */
+.docs-prose
+  :is(h2, h3, h4):not(
+    .not-prose *,
+    .preview-code-panel *,
+    .docs-code-viewer *
+  ) {
+  scroll-margin-top: 5rem;
+}
+
+.docs-prose h2:not(.not-prose *, .preview-code-panel *, .docs-code-viewer *) {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.docs-prose h3:not(.not-prose *, .preview-code-panel *, .docs-code-viewer *) {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.docs-prose h4:not(.not-prose *, .preview-code-panel *, .docs-code-viewer *) {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.docs-prose > hr {
+  margin-block: 2rem;
+  border-color: var(--border);
+}
+
+.docs-prose > p {
+  margin-bottom: 1rem;
+  color: var(--muted-foreground);
+  line-height: 1.625;
+}
+
+.docs-prose .docs-api-table + .docs-api-table {
+  margin-top: 0.75rem;
+}
+
+/* API 테이블 첫 열(Prop·Slot·Event): 인라인 코드 pill 없이 일반 텍스트 */
+.docs-api-table tbody td:first-child code {
+  padding: 0;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background: transparent;
+}
+
+/* 마크다운·PreviewFrame 공용 코드 뷰어 (Shiki) */
+.docs-code-viewer {
+  color-scheme: light;
+}
+
+.docs-prose > .docs-code-viewer {
+  margin-block: 1rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+.docs-code-viewer.preview-code-panel pre.shiki,
+.docs-code-viewer.preview-code-panel .preview-code pre.shiki {
+  line-height: 1;
+}
+
+.docs-code-viewer pre.shiki {
+  max-height: min(420px, 50vh);
+  margin: 0;
+  overflow: auto;
+  padding: 1rem 1rem 1.25rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.625;
+  background-color: #f9f9f9;
+  tab-size: 2;
+}
+
+.docs-code-viewer pre.shiki code {
+  display: block;
+  background: transparent !important;
+}
+
+.docs-code-viewer pre.shiki code .line {
+  display: block;
+}
+
+.docs-code-viewer[data-line-numbers] pre.shiki code {
+  counter-reset: line;
+}
+
+.docs-code-viewer[data-line-numbers] pre.shiki code .line::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  min-width: 2.25rem;
+  margin-right: 1rem;
+  text-align: right;
+  color: #a1a1aa;
+  user-select: none;
+}

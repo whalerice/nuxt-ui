@@ -1,0 +1,12 @@
+---
+description: apps/playground — workspace 연결, extends + `@whalerice/nuxt-ui` module만
+globs: apps/playground/**
+alwaysApply: false
+---
+
+# Playground 앱
+
+- **용도**: UI 패키지 스모크·SSR/hydration 확인 전용.
+- **의존**: `packages/ui` 는 `@whalerice/nuxt-ui` workspace 로 연결.
+- **Nuxt**: `extends: ['@whalerice/nuxt-ui']`, `modules: ['@whalerice/nuxt-ui/module']`. `shadcn-nuxt` 추가 금지.
+- **범위**: 앱 전용 위젯은 최소화하고 UI 컴포넌트 검증이 목적임을 유지한다.
