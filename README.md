@@ -3,6 +3,12 @@
 **whalerice** Nuxt 4 디자인 시스템 모노레포입니다.  
 [`@whalerice/nuxt-ui`](packages/ui) 패키지를 개발·문서화하고, GitHub Packages(`https://npm.pkg.github.com`)로 배포합니다.
 
+## 링크
+
+- 문서 사이트: <https://nuxt-ui-docs.vercel.app/>
+- 저장소: <https://github.com/whalerice/nuxt-ui>
+- 패키지: <https://github.com/whalerice/nuxt-ui/pkgs/npm/nuxt-ui>
+
 ## 개요
 
 - **UI 패키지**: `shadcn-vue` CLI로 생성·갱신하는 Nuxt 레이어 + companion 모듈
