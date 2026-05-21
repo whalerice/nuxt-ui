@@ -2,6 +2,11 @@
 
 Nuxt 4 + Tailwind v4 기반 UI 레이어입니다. GitHub Packages(`https://npm.pkg.github.com`)에서 설치합니다.
 
+## 링크
+
+- 저장소: <https://github.com/whalerice/nuxt-ui>
+- 패키지: <https://github.com/whalerice/nuxt-ui/pkgs/npm/nuxt-ui>
+
 ## 요구사항
 
 - Node `>=20`
@@ -18,14 +23,16 @@ Nuxt 4 + Tailwind v4 기반 UI 레이어입니다. GitHub Packages(`https://npm.
 - org에 SSO가 있으면 해당 org에 **Authorize** 필요
 
 ```bash
-export GITHUB_PACKAGES_TOKEN=ghp_xxx
+export GITHUB_TOKEN=ghp_xxx
+echo 'export GITHUB_TOKEN="본인의_깃허브_토큰"' >> ~/.zshrc
+source ~/.zshrc
 ```
 
-### 2. 소비 앱 루트 `.npmrc`
+### 2. 사용 앱 루트 `.npmrc`
 
 ```ini
 @whalerice:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=${GITHUB_PACKAGES_TOKEN}
+//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
 ```
 
 ### 3. 패키지 추가
@@ -98,11 +105,11 @@ const open = ref(false);
 
 ## package exports
 
-| path               | 용도                                      |
-| ------------------ | ----------------------------------------- |
-| `.`                | Nuxt 레이어 (`extends`)                   |
-| `./module`         | companion 모듈                            |
-| `./style.css`      | 레이어 Tailwind 엔트리 (선택)             |
-| `./<component>`    | 컴포넌트 barrel (`accordion`, `button` …) |
-| `./components`     | 전체 UI barrel                            |
-| `./lib/utils`      | `cn()` 유틸                               |
+| path            | 용도                                      |
+| --------------- | ----------------------------------------- |
+| `.`             | Nuxt 레이어 (`extends`)                   |
+| `./module`      | companion 모듈                            |
+| `./style.css`   | 레이어 Tailwind 엔트리 (선택)             |
+| `./<component>` | 컴포넌트 barrel (`accordion`, `button` …) |
+| `./components`  | 전체 UI barrel                            |
+| `./lib/utils`   | `cn()` 유틸                               |

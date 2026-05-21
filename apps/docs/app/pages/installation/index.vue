@@ -2,7 +2,7 @@
 useSeoMeta({
   title: "Installation",
   description:
-    "소비 앱에서 @whalerice/nuxt-ui를 GitHub Packages로 설치하고 Nuxt 4에 연결하는 방법",
+    "사용 앱에서 @whalerice/nuxt-ui를 GitHub Packages로 설치하고 Nuxt 4에 연결하는 방법",
 });
 
 definePageMeta({
@@ -15,7 +15,7 @@ definePageMeta({
     <header class="space-y-2 not-prose">
       <h1 class="text-3xl font-bold tracking-tight">Installation</h1>
       <p class="text-muted-foreground text-sm leading-relaxed">
-        Nuxt 4 소비 앱에서
+        Nuxt 4 사용 앱에서
         <code class="rounded bg-muted px-1 py-0.5 text-xs"
           >@whalerice/nuxt-ui</code
         >
@@ -72,14 +72,12 @@ definePageMeta({
       </ul>
       <p>터미널에 토큰을 환경 변수로 둡니다.</p>
       <div class="docs-code-viewer not-prose" data-line-numbers>
-        <pre
-          class="shiki"
-        ><code>export GITHUB_PACKAGES_TOKEN=ghp_xxx</code></pre>
+        <pre class="shiki"><code>export GITHUB_TOKEN=ghp_xxx</code></pre>
       </div>
     </section>
 
     <section class="space-y-4">
-      <h2>2. 소비 앱 <code class="text-base font-mono">.npmrc</code></h2>
+      <h2>2. 사용 앱 <code class="text-base font-mono">.npmrc</code></h2>
       <p>
         Nuxt 프로젝트 루트에
         <code class="rounded bg-muted px-1 py-0.5 text-xs">.npmrc</code>를
@@ -87,20 +85,18 @@ definePageMeta({
       </p>
       <div class="docs-code-viewer not-prose" data-line-numbers>
         <pre class="shiki"><code>@whalerice:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=${GITHUB_PACKAGES_TOKEN}</code></pre>
+//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}</code></pre>
       </div>
       <p class="text-sm">
         CI에서는
-        <code class="rounded bg-muted px-1 py-0.5 text-xs"
-          >GITHUB_PACKAGES_TOKEN</code
-        >
+        <code class="rounded bg-muted px-1 py-0.5 text-xs">GITHUB_TOKEN</code>
         시크릿을 주입하면 됩니다.
       </p>
     </section>
 
     <section class="space-y-4">
       <h2>3. 패키지 설치 (pnpm)</h2>
-      <p>소비 앱 디렉터리에서 실행합니다.</p>
+      <p>사용 앱 디렉터리에서 실행합니다.</p>
       <div class="docs-code-viewer not-prose" data-line-numbers>
         <pre class="shiki"><code>pnpm add @whalerice/nuxt-ui</code></pre>
       </div>

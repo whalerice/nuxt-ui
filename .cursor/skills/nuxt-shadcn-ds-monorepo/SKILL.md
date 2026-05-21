@@ -33,7 +33,7 @@ disable-model-invocation: true
 
 ## Publish mindset (later)
 
-- `package.json` 의 `exports`, `files`, `peerDependencies` 변경은 소비 앱 깨짐과 직결 — diff 에서 명시 검토.
+- `package.json` 의 `exports`, `files`, `peerDependencies` 변경은 사용 앱 깨짐과 직결 — diff 에서 명시 검토.
 
 ## Plan source
 

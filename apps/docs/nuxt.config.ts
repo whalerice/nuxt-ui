@@ -1,7 +1,7 @@
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-import tailwindcss from "@tailwindcss/vite";
+import { suppressSourcemapWarnPlugin } from "./lib/vite-plugin-suppress-sourcemap-warn";
 
 const _dirname = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(_dirname, "../..");
@@ -22,7 +22,7 @@ export default defineNuxtConfig({
     watch: { enabled: false },
   },
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [suppressSourcemapWarnPlugin()],
     server: {
       fs: {
         allow: [repoRoot],
